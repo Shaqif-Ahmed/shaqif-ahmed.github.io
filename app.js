@@ -1,8 +1,6 @@
-const menu = document.querySelector("#mobile-menu");
-const menuLinks = document.querySelector(".navbar_menu");
-
-const mobileMenu = () => {
-  menu.classList.toggle("is-active");
-  menuLinks.classList.toggle("active");
-};
-menu.addEventListener("click", mobileMenu);
+const list = document.getElementsByClassName("listbx");
+for (i = 0; i < list.length; i++) {
+  list[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+}
