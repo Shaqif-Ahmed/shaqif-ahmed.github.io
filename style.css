@@ -1,0 +1,83 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: rgb(49, 3, 177);
+}
+
+.sidebar header {
+  font-size: 22px;
+  margin-top: 0;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background: rgb(98, 63, 253);
+}
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar ul a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 60px;
+  box-sizing: border-box;
+  border-top: 1px solid rgb(77, 118, 255);
+  transition: 0.5s;
+}
+
+.sidebar ul li:hover a {
+  padding-left: 20px;
+}
+#list {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.list {
+  padding-left: 320px;
+  align-items: center;
+  width: 600px;
+}
+.list .listbx {
+  position: relative;
+}
+.list .listbx .title {
+  position: relative;
+  padding: 10px;
+  background: blue;
+  color: white;
+  cursor: pointer;
+}
+.list .listbx .title::before {
+  content: "+";
+  position: absolute;
+  top: 5%;
+  right: 5px;
+  transform: translate(-50%);
+  font-size: 1.5em;
+}
+.list .listbx.listbx.active .title::before {
+  content: "-";
+}
+.list .listbx .content {
+  position: relative;
+  padding: 0;
+  background: cyan;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+.list .listbx.active .content {
+  height: 300px;
+  padding: 10px;
+}
